@@ -84,8 +84,8 @@ code --install-extension lica-offline-1.0.0.vsix
 
 #### Option B: 소스에서 빌드
 ```bash
-git clone https://github.com/sunjongos/lica-offline.git
-cd lica-offline
+git clone https://github.com/sunjongos/luca-offline-localLLM.git
+cd luca-offline-localLLM
 npm install
 npm run compile
 npx vsce package --no-dependencies
@@ -97,7 +97,7 @@ code --install-extension lica-offline-1.0.0.vsix
 ## 📁 Project Structure
 
 ```
-lica-offline/
+luca-offline-localLLM/
 ├── src/
 │   ├── extension.ts          # Extension entry point & command registration
 │   ├── chatViewProvider.ts   # Webview sidebar provider (core logic)
