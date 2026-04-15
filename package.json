@@ -1,0 +1,106 @@
+{
+  "name": "luca-offline",
+  "displayName": "Luca Offline (로컬 AI 인턴)",
+  "description": "인터넷 없이도 로컬 Ollama LLM으로 코딩 어시스턴트를 사용하는 오프라인 AI 채팅 Extension",
+  "version": "1.0.0",
+  "publisher": "sunjongos",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["AI", "Chat"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "icon": "resources/icon.png",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "luca-offline-sidebar",
+          "title": "Luca Offline",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "luca-offline-sidebar": [
+        {
+          "type": "webview",
+          "id": "luca-offline.chatView",
+          "name": "AI 인턴 채팅"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "luca-offline.openChat",
+        "title": "Luca Offline: 채팅 열기"
+      },
+      {
+        "command": "luca-offline.askAboutSelection",
+        "title": "Luca Offline: 선택한 코드 질문하기"
+      },
+      {
+        "command": "luca-offline.switchModel",
+        "title": "Luca Offline: 모델 전환"
+      },
+      {
+        "command": "luca-offline.clearChat",
+        "title": "Luca Offline: 대화 초기화"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "luca-offline.askAboutSelection",
+          "when": "editorHasSelection",
+          "group": "luca-offline"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Luca Offline",
+      "properties": {
+        "lucaOffline.ollamaUrl": {
+          "type": "string",
+          "default": "http://localhost:11434",
+          "description": "Ollama 서버 URL"
+        },
+        "lucaOffline.defaultModel": {
+          "type": "string",
+          "default": "gemma4:e4b",
+          "description": "기본 사용 모델",
+          "enum": ["gemma4:e4b", "gemma4:latest", "gemma4:ndb", "gemma2:2b"]
+        },
+        "lucaOffline.systemPrompt": {
+          "type": "string",
+          "default": "당신은 대한민국 최고의 AI 1인 기업 대표님과 총괄 본부장 '루카(Luca)'를 직속으로 보좌하는 전속 AI 수석 인턴(코드명: E4B)입니다. 코딩 관련 질문에 마크다운 기반으로 정확하고 간결하게 답변합니다. 코드 블록에는 반드시 언어를 명시합니다.",
+          "description": "시스템 프롬프트"
+        },
+        "lucaOffline.maxContextLines": {
+          "type": "number",
+          "default": 200,
+          "description": "컨텍스트로 보낼 최대 코드 라인 수"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "luca-offline.askAboutSelection",
+        "key": "ctrl+shift+l",
+        "when": "editorHasSelection"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^2.22.0"
+  }
+}
