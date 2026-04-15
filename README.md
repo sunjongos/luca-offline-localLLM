@@ -28,6 +28,7 @@
 | 🎯 **코드 컨텍스트** | 현재 파일 + 선택 영역을 자동으로 프롬프트에 포함 |
 | ⌨️ **단축키 지원** | `Ctrl+Shift+L`로 선택 코드 즉시 질문 |
 | 🎨 **VS Code 네이티브 UI** | 사이드바 Webview로 완벽한 다크 테마 연동 |
+| 📷 **멀티모달 이미지** | Ctrl+V 붙여넣기, 드래그앤드롭, 파일 첨부 → Ollama Vision API |
 
 ---
 
@@ -41,7 +42,21 @@
 
 ---
 
-## 🚀 Quick Start
+## ⚡ One-Line Install (원클릭 설치)
+
+```powershell
+# PowerShell에서 한 줄로 끝!
+git clone https://github.com/sunjongos/luca-offline-localLLM.git $HOME\luca-offline-localLLM; cd $HOME\luca-offline-localLLM; npm install; npm run compile; npx -y @vscode/vsce package --no-dependencies; code --install-extension (Get-ChildItem *.vsix | Select-Object -First 1).FullName --force
+```
+
+Or use the included installer script:
+```powershell
+.\scripts\install.ps1
+```
+
+---
+
+## 🚀 Quick Start (Manual)
 
 ### 1. Ollama 설치
 
@@ -79,7 +94,7 @@ ollama serve
 
 #### Option A: VSIX 직접 설치 (권장)
 ```bash
-code --install-extension lica-offline-1.0.0.vsix
+code --install-extension lica-offline-1.1.0.vsix
 ```
 
 #### Option B: 소스에서 빌드
@@ -89,7 +104,7 @@ cd luca-offline-localLLM
 npm install
 npm run compile
 npx vsce package --no-dependencies
-code --install-extension lica-offline-1.0.0.vsix
+code --install-extension lica-offline-1.1.0.vsix
 ```
 
 ---
