@@ -256,7 +256,7 @@
     chatMessages.innerHTML = `
       <div class="welcome-message">
         <div class="welcome-icon">🧑‍💻</div>
-        <h3>LICA Offline</h3>
+        <h3>LUCA Offline</h3>
         <p>인터넷 없이도 동작하는 멀티모달 로컬 AI 코딩 어시스턴트입니다.</p>
         <p class="hint">📷 이미지를 붙여넣기(Ctrl+V) 하거나 드래그해서 질문할 수 있어요</p>
         <p class="hint">⌨️ 코드를 선택 후 <kbd>Ctrl+Shift+L</kbd>로 질문할 수 있어요</p>
@@ -266,7 +266,7 @@
   function addMessageEl(role, content, images) {
     const el = document.createElement('div');
     el.className = `message ${role}`;
-    const roleLabel = role === 'user' ? '👤 나' : '🤖 LICA';
+    const roleLabel = role === 'user' ? '👤 나' : '🤖 LUCA';
 
     let imagesHtml = '';
     if (images && images.length > 0) {
@@ -289,7 +289,7 @@
     const el = document.createElement('div');
     el.className = 'message assistant';
     el.innerHTML = `
-      <div class="message-role">🤖 LICA</div>
+      <div class="message-role">🤖 LUCA</div>
       <div class="message-content streaming-cursor"></div>`;
     chatMessages.appendChild(el);
     scrollToBottom();

@@ -92,7 +92,7 @@ git clone https://github.com/sunjongos/luca-offline-localLLM.git $HOME\luca-offl
 
 1. **빌드 성공**: `out/extension.js` 파일 존재 확인
 2. **VSIX 생성**: `*.vsix` 파일 생성 확인
-3. **Extension 설치**: `code --list-extensions` 에서 `sunjongos.lica-offline` 확인
+3. **Extension 설치**: `antigravity --list-extensions` 에서 `sunjongos.luca-offline` 확인
 4. **Ollama 연결**: `curl http://localhost:11434/api/tags` 응답 확인
 5. **사이드바**: VS Code 왼쪽 사이드바에 🤖 아이콘 표시 확인
 

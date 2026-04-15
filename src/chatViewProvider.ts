@@ -17,7 +17,7 @@ export class ChatViewProvider implements vscode.WebviewViewProvider {
   ) {
     const config = vscode.workspace.getConfiguration('lucaOffline');
     const ollamaUrl = config.get<string>('ollamaUrl', 'http://localhost:11434');
-    this._currentModel = config.get<string>('defaultModel', 'gemma4:e4b');
+    this._currentModel = config.get<string>('defaultModel', 'gemma4:e2b');
     this._ollamaClient = new OllamaClient(ollamaUrl);
   }
 
@@ -347,14 +347,14 @@ export class ChatViewProvider implements vscode.WebviewViewProvider {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource} 'unsafe-inline'; script-src 'nonce-${nonce}'; font-src ${webview.cspSource}; img-src ${webview.cspSource} data: blob:;">
   <link href="${styleUri}" rel="stylesheet">
-  <title>LICA Offline Chat</title>
+  <title>LUCA Offline Chat</title>
 </head>
 <body>
   <div id="app">
     <header id="header">
       <div class="header-left">
         <span class="header-icon">🤖</span>
-        <span class="header-title">LICA</span>
+        <span class="header-title">LUCA</span>
       </div>
       <div class="header-right">
         <select id="model-select" title="모델 선택"></select>
@@ -369,7 +369,7 @@ export class ChatViewProvider implements vscode.WebviewViewProvider {
     <div id="chat-messages">
       <div class="welcome-message">
         <div class="welcome-icon">🧑‍💻</div>
-        <h3>LICA Offline</h3>
+        <h3>LUCA Offline</h3>
         <p>인터넷 없이도 동작하는 멀티모달 로컬 AI 코딩 어시스턴트입니다.</p>
         <p class="hint">📷 이미지를 붙여넣기(Ctrl+V) 하거나 드래그해서 질문할 수 있어요</p>
         <p class="hint">⌨️ 코드를 선택 후 <kbd>Ctrl+Shift+L</kbd>로 질문할 수 있어요</p>

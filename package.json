@@ -1,7 +1,7 @@
 {
-  "name": "lica-offline",
-  "displayName": "LICA Offline (Local LLMs In-Code Assistant)",
-  "description": "LICA — 인터넷 없이도 로컬 Ollama LLM으로 코딩 어시스턴트를 사용하는 오프라인 AI 채팅 Extension (Local LLMs)",
+  "name": "luca-offline",
+  "displayName": "LUCA Offline (Local LLMs In-Code Assistant)",
+  "description": "LUCA — 인터넷 없이도 로컬 Ollama LLM으로 코딩 어시스턴트를 사용하는 오프라인 AI 채팅 Extension (Local LLMs)",
   "version": "1.1.0",
   "publisher": "sunjongos",
   "repository": {
@@ -71,9 +71,9 @@
         },
         "lucaOffline.defaultModel": {
           "type": "string",
-          "default": "gemma4:e4b",
+          "default": "gemma4:e2b",
           "description": "기본 사용 모델",
-          "enum": ["gemma4:e4b", "gemma4:latest", "gemma4:ndb", "gemma2:2b"]
+          "enum": ["gemma4:e2b", "gemma4:e4b", "gemma4:latest", "gemma4:ndb", "gemma2:2b"]
         },
         "lucaOffline.systemPrompt": {
           "type": "string",

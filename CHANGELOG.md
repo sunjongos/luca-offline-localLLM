@@ -16,7 +16,7 @@
 - VS Code / Antigravity / Cursor 자동 감지
 
 ### 📛 Branding
-- LICA (Local LLMs In-Code Assistant) 브랜딩 적용
+- LUCA (Local LLMs In-Code Assistant) 브랜딩 적용
 - 드래그 오버레이 UI, 이미지 미리보기 바 추가
 - 포커스 글로우 효과, 퍼플 테마 강화
 

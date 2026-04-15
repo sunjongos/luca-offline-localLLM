@@ -128,7 +128,7 @@ export class OllamaClient {
       path: '/api/chat',
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'applucation/json',
         'Content-Length': Buffer.byteLength(body),
       },
       timeout: 180000,  // 3 min for vision models
@@ -219,7 +219,7 @@ export class OllamaClient {
         path: '/api/chat',
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'applucation/json',
           'Content-Length': Buffer.byteLength(body),
         },
         timeout: 180000,

@@ -1,14 +1,14 @@
-/* ===== LICA Offline Chat — Multimodal VS Code Theme ===== */
+/* ===== LUCA Offline Chat — Multimodal VS Code Theme ===== */
 
 :root {
-  --lica-accent: #7c3aed;
-  --lica-accent-hover: #6d28d9;
-  --lica-accent-glow: rgba(124, 58, 237, 0.25);
-  --lica-user-bg: rgba(124, 58, 237, 0.12);
-  --lica-assistant-bg: rgba(255, 255, 255, 0.04);
-  --lica-border: rgba(255, 255, 255, 0.08);
-  --lica-radius: 10px;
-  --lica-code-bg: rgba(0, 0, 0, 0.3);
+  --luca-accent: #7c3aed;
+  --luca-accent-hover: #6d28d9;
+  --luca-accent-glow: rgba(124, 58, 237, 0.25);
+  --luca-user-bg: rgba(124, 58, 237, 0.12);
+  --luca-assistant-bg: rgba(255, 255, 255, 0.04);
+  --luca-border: rgba(255, 255, 255, 0.08);
+  --luca-radius: 10px;
+  --luca-code-bg: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -40,7 +40,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  border-bottom: 1px solid var(--lica-border);
+  border-bottom: 1px solid var(--luca-border);
   background: var(--vscode-sideBarSectionHeader-background, rgba(255,255,255,0.03));
   flex-shrink: 0;
 }
@@ -156,7 +156,7 @@ body {
 .welcome-message h3 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--lica-accent);
+  color: var(--luca-accent);
 }
 .welcome-message p {
   font-size: 12px;
@@ -179,7 +179,7 @@ body {
 /* Message containers */
 .message {
   padding: 10px 12px;
-  border-radius: var(--lica-radius);
+  border-radius: var(--luca-radius);
   line-height: 1.6;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -192,12 +192,12 @@ body {
 }
 
 .message.user {
-  background: var(--lica-user-bg);
-  border-left: 3px solid var(--lica-accent);
+  background: var(--luca-user-bg);
+  border-left: 3px solid var(--luca-accent);
 }
 
 .message.assistant {
-  background: var(--lica-assistant-bg);
+  background: var(--luca-assistant-bg);
   border-left: 3px solid rgba(74, 222, 128, 0.5);
 }
 
@@ -216,7 +216,7 @@ body {
   opacity: 0.6;
 }
 
-.message.user .message-role { color: var(--lica-accent); }
+.message.user .message-role { color: var(--luca-accent); }
 .message.assistant .message-role { color: #4ade80; }
 
 /* ===== Message Images (inline in chat) ===== */
@@ -260,7 +260,7 @@ body {
 
 /* Inline code */
 .message-content code:not(.block-code) {
-  background: var(--lica-code-bg);
+  background: var(--luca-code-bg);
   padding: 1px 5px;
   border-radius: 3px;
   font-family: var(--vscode-editor-font-family, 'Cascadia Code', 'Fira Code', monospace);
@@ -321,7 +321,7 @@ body {
 .streaming-cursor::after {
   content: '▋';
   animation: blink 0.8s infinite;
-  color: var(--lica-accent);
+  color: var(--luca-accent);
   font-weight: bold;
 }
 
@@ -333,7 +333,7 @@ body {
 /* ===== Input Area ===== */
 #input-area {
   padding: 8px 12px 12px 12px;
-  border-top: 1px solid var(--lica-border);
+  border-top: 1px solid var(--luca-border);
   background: var(--vscode-sideBar-background, #1e1e2e);
   flex-shrink: 0;
 }
@@ -387,8 +387,8 @@ body {
   height: 56px;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid var(--lica-accent);
-  box-shadow: 0 2px 8px var(--lica-accent-glow);
+  border: 2px solid var(--luca-accent);
+  box-shadow: 0 2px 8px var(--luca-accent-glow);
   cursor: default;
   transition: border-color 0.2s;
 }
@@ -435,8 +435,8 @@ body {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .input-wrapper:focus-within {
-  border-color: var(--lica-accent);
-  box-shadow: 0 0 0 2px var(--lica-accent-glow);
+  border-color: var(--luca-accent);
+  box-shadow: 0 0 0 2px var(--luca-accent-glow);
 }
 
 .input-actions {
@@ -461,7 +461,7 @@ body {
 
 #btn-attach:hover {
   background: rgba(124, 58, 237, 0.15);
-  color: var(--lica-accent);
+  color: var(--luca-accent);
 }
 
 #user-input {
@@ -483,7 +483,7 @@ body {
 }
 
 #btn-send {
-  background: var(--lica-accent);
+  background: var(--luca-accent);
   border: none;
   color: white;
   width: 28px;
@@ -497,7 +497,7 @@ body {
   transition: background 0.15s;
 }
 #btn-send:hover {
-  background: var(--lica-accent-hover);
+  background: var(--luca-accent-hover);
 }
 #btn-send:disabled {
   opacity: 0.4;
@@ -526,11 +526,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  color: var(--lica-accent);
+  color: var(--luca-accent);
   font-size: 16px;
   font-weight: 700;
   padding: 32px 48px;
-  border: 3px dashed var(--lica-accent);
+  border: 3px dashed var(--luca-accent);
   border-radius: 16px;
   background: rgba(124, 58, 237, 0.08);
   animation: pulse-border 1.5s ease infinite;
@@ -541,6 +541,6 @@ body {
 }
 
 @keyframes pulse-border {
-  0%, 100% { border-color: var(--lica-accent); }
+  0%, 100% { border-color: var(--luca-accent); }
   50% { border-color: rgba(124, 58, 237, 0.3); }
 }
